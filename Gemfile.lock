@@ -139,11 +139,16 @@ GEM
     tilt (1.4.1)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
+    versionist (1.4.1)
+      activesupport (>= 3)
+      railties (>= 3)
+      yard (~> 0.7)
     web-console (2.1.1)
       activemodel (>= 4.0)
       binding_of_caller (>= 0.7.2)
       railties (>= 4.0)
       sprockets-rails (>= 2.0, < 4.0)
+    yard (0.8.7.6)
 
 PLATFORMS
   ruby
@@ -157,4 +162,5 @@ DEPENDENCIES
   rspec-rails (~> 3.0)
   sdoc (~> 0.4.0)
   spring
+  versionist
   web-console (~> 2.0)

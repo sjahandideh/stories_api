@@ -23,4 +23,21 @@ describe Book, type: :model do
     end
   end
 
+  describe '.in_genre' do
+    let!(:b1) { Book.create title: 'b1', genres: ['comedy', 'drama'] }
+    let!(:b2) { Book.create title: 'b2', genres: ['fiction', 'drama'] }
+    let!(:b3) { Book.create title: 'b3', genres: ['comedy'] }
+
+    it 'returns all comedy books' do
+      expect(Book.in_genre 'comedy').to eq [b1,b3]
+    end
+
+    it 'returns the one fiction book' do
+      expect(Book.in_genre 'fiction').to eq [b2]
+    end
+
+    it 'returns empty for nil' do
+      expect(Book.in_genre nil).to be_empty
+    end
+  end
 end
